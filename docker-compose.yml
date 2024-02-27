@@ -3,9 +3,7 @@ services:
   db:
     image: postgres
     volumes:
-      - type: bind
-        source: ./tmp/db
-        target: /var/lib/postgresql/data
+      - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
   web:
